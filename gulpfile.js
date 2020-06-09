@@ -201,7 +201,7 @@ function reloadJS(done) {
 
 gulp.task("tailwind-postcss", function (done) {
   return gulp
-    .src("./source/css/style.css")
+    .src("./source/css/style.pcss")
     .pipe(
       postcss([
         require("postcss-import"),
@@ -260,7 +260,7 @@ function rebuild(done) {
   return gulp.series(build, reload, () => done());
 }
 
-function watch() {
+function watch () {
   const jsPaths = [
     resolvePath(paths().source.js) + "/*.js",
     resolvePath(paths().source.js) + "/**/*.js",
@@ -273,12 +273,14 @@ function watch() {
   // Detect JS changes
   gulp.watch(
     jsPaths,
+    {useFsEvents: false},
     gulp.series("pl-copy:js", reloadJS)
   );
 
   // Detect postcss file changes
   gulp.watch(
     postcssPaths,
+    {useFsEvents: false},
     gulp.series("tailwind-postcss")
   );
 
@@ -287,6 +289,7 @@ function watch() {
   // Detect updated css bundle change
   gulp.watch(
     resolvePath(paths().source.root) + "/dist/style.pkgd.css",
+    {useFsEvents: false},
     gulp.series("pl-copy:css", reloadCSS)
   );
 
@@ -296,6 +299,7 @@ function watch() {
       resolvePath(paths().source.styleguide) + "/*.*",
       resolvePath(paths().source.styleguide) + "/**/*.*",
     ],
+    {useFsEvents: false},
     gulp.series("pl-copy:styleguide", "pl-copy:styleguide-css", reloadCSS)
   );
 
@@ -311,7 +315,7 @@ function watch() {
 
   console.log("Watching following Pattern Lab files:", patternWatches);
 
-  gulp.watch(patternWatches, gulp.series(build, reload));
+  gulp.watch(patternWatches, {useFsEvents: false}, gulp.series(build, reload));
 }
 
 gulp.task(

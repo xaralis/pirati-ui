@@ -36,14 +36,21 @@ module.exports = {
         '500': '#202020',
       },
       'red': '#d6151b',
-      'facebook-blue': '#067ceb',
       'green': {
         '100': '#29bc51',
         '200': '#1c8c3b',
+      },
+      'brands': {
+        'facebook': '#067ceb',
+        'twitter': '#00c9ff',
+        'gmail': '#ec230e',
+        'linkedin': '#0066a9',
       }
     },
     spacing: {
       '0': '0',
+      'xs': '0.15rem',
+      'sm': '0.25rem',
       '1': '0.5rem',
       '2': '1rem',
       '3': '1.5rem',

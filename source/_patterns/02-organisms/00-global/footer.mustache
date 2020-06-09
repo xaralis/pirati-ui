@@ -58,31 +58,17 @@
           </div>
           <div class="md:col-span-3 col-span-12 footer-social mb-3 md:mb-0">
             <div class="mb-2">
-              <div class="footer-social-links is-highlighted pb-2">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fas fa-rss"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-flickr"></i></a>
+              <div class="social-icon-group space-x-1 text-white pb-2">
+                {{> atoms-basic-social-icon(icon: "fab fa-twitter") }}
+                {{> atoms-basic-social-icon(icon: "fas fa-rss") }}
+                {{> atoms-basic-social-icon(icon: "fab fa-instagram") }}
+                {{> atoms-basic-social-icon(icon: "fab fa-flickr") }}
+                {{> atoms-basic-social-icon(icon: "fas fa-envelope") }}
               </div>
-              <a href="#"><i class="fas fa-envelope"></i> Dejte nám vědět</a
-              >
+              {{> atoms-basic-contact-line(icon: "fas fa-envelope", caption: "Dejte nám vědět") }}
             </div>
-            <a href="#" class="btn has-icon is-inverted is-lg is-fullwidth md:is-auto mb-1">
-              <div class="btn-body-wrap">
-                <span class="btn-body">Přispěj</span>
-                <div class="btn-icon">
-                  <img src="https://www.va-fighters.com/pirati/krajska-sablona/dist/assets/img/icons/money.svg" alt="" />
-                </div>
-              </div>
-            </a>
-            <a href="#" class="btn has-icon is-green is-lg is-fullwidth md:is-auto">
-              <div class="btn-body-wrap">
-                <span class="btn-body">Naloď se</span>
-                <div class="btn-icon">
-                  <img src="https://www.va-fighters.com/pirati/krajska-sablona/dist/assets/img/icons/onboard.svg" alt="" />
-                </div>
-              </div>
-            </a>
+            {{> atoms-icon-button(cta: "Přispěj", icon: "fas fa-hand-holding-usd", classes: "is-inverted is-lg is-fullwidth md:is-auto mb-1") }}
+            {{> atoms-icon-button(cta: "Naloď se", icon: "fas fa-anchor", classes: "is-green is-lg is-fullwidth md:is-auto") }}
           </div>
         </div>
       </div>
@@ -123,18 +109,16 @@
     <div class="container">
       <div class="footer-contacts">
         <div class="footer-contact">
-          {{> 01-molecules/00-badge/condensed }}
+          {{> molecules-condensed-badge }}
         </div>
         <div class="footer-contact">
-          {{> 01-molecules/00-badge/condensed }}
+          {{> molecules-condensed-badge }}
         </div>
         <div class="footer-contact">
-          {{> 01-molecules/00-badge/condensed }}
+          {{> molecules-condensed-badge }}
         </div>
         <div class="mt-4 lg:mt-0 lg:text-right footer-contact">
-          <a href="#" class="btn is-basic is-inverted is-fullwidth md:is-auto is-lg to-faded">
-            <span class="btn-body">Kontakt</span>
-          </a>
+          {{> atoms-basic-button(cta: "Kontakt", classes: "is-inverted is-fullwidth md:is-auto is-lg to-faded") }}
         </div>
       </div>
     </div>
