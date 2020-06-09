@@ -1,0 +1,78 @@
+.footer {
+  @apply text-grey-200;
+}
+
+.footer-splitter {
+  @apply border-t border-grey-400;
+}
+
+.footer-section {
+  @apply py-3;
+
+  @screen md {
+    @apply py-6;
+
+    &.is-dense {
+      @apply py-3;
+    }
+  }
+}
+
+.footer-inv {
+  @apply bg-black;
+}
+
+.footer-main,
+.footer-sub {
+  @apply bg-grey-500;
+}
+
+.footer .is-highlighted {
+  @apply text-white;
+}
+
+.footer-contacts {
+  @apply grid grid-cols-12;
+}
+
+.footer-contacts .footer-contact {
+  @apply col-span-12 text-white;
+
+  @screen lg {
+    @apply col-span-6;
+  }
+
+  @screen xl {
+    @apply col-span-3;
+  }
+}
+
+.footer-copy {
+  @apply pr-7;
+  order: -2;
+
+  @screen sm {
+    order: 0;
+  }
+}
+
+.footer-links {
+  @apply mt-3;
+}
+
+.footer-link {
+  @apply mb-1;
+}
+
+.footer-social {
+  order: -1;
+
+  @screen sm {
+    @apply text-right;
+    order: 1;
+  }
+}
+
+.footer-social-links a {
+  @apply text-white ml-1;
+}

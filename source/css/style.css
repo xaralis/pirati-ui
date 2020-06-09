@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@import "tailwindcss/base";
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@import "tailwindcss/components";
+
+/**
+ * Custom components
+ */
+@import "./atoms/button.pcss";
+@import "./atoms/heading.pcss";
+@import "./atoms/paragraph.pcss";
+@import "./molecules/badge.pcss";
+@import "./organisms/footer.pcss";
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+@import "tailwindcss/utilities";
+
+/**
+ * Custom utilities
+ */
+@import "./utils.pcss";
+
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  @apply font-body font-normal leading-none antialiased;
+  font-size: 1rem;
+}
+
+a:hover {
+  @apply underline;
+}

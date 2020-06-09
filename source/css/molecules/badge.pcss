@@ -1,0 +1,55 @@
+.badge {
+  @apply flex items-center font-body;
+
+  .badge-avatar {
+    @apply text-center;
+
+    img {
+      @apply rounded-full w-8 block;
+    }
+  }
+
+  .badge-body {
+    @apply text-left ml-3;
+  }
+
+  .badge-title {
+    @apply block;
+  }
+
+  .badge-occupation {
+    @apply uppercase text-sm max-w-sm my-1;
+  }
+
+  .badge-link {
+    @apply text-sm font-light block w-full;
+
+    i {
+      @apply mr-1;
+    }
+
+    @media (max-width: 1200px) {
+      i {
+        display: none;
+      }
+    }
+
+    &.is-dimmed {
+      @apply text-grey-300;
+    }
+  }
+}
+
+.badge.is-condensed {
+  .badge-title {
+    @apply mb-1;
+  }
+
+  .badge-avatar img {
+    @apply w-7 block;
+  }
+
+  .badge-body {
+    @apply ml-2;
+  }
+}

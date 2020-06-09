@@ -1,0 +1,99 @@
+.btn {
+  @apply inline-block text-center font-normal max-w-xs;
+
+  .btn-body,
+  .btn-icon {
+    @apply transition duration-200 bg-black text-white;
+  }
+
+  .btn-body {
+    @apply block;
+    padding: .5em 2em;
+  }
+
+  &:hover {
+    @apply no-underline;
+  }
+}
+
+.btn.has-icon {
+  .btn-body-wrap {
+    @apply flex;
+  }
+
+  .btn-icon {
+    @apply border-l border-black px-2 flex;
+
+    img {
+      @apply w-2;
+    }
+  }
+
+  &:hover .btn-icon {
+    @apply border-l border-grey-500 bg-black;
+
+    svg, i {
+      @apply text-white;
+      fill: theme('colors.white');
+    }
+  }
+}
+
+.btn.is-green {
+  .btn-body,
+  .btn-icon {
+    @apply bg-green-100 text-white;
+  }
+
+  &:hover .btn-body,
+  &:hover .btn-icon {
+    @apply bg-black text-white;
+  }
+
+  &.to-faded:hover .btn-body {
+    @apply bg-grey-500 text-white;
+  }
+
+  .btn-icon {
+    @apply border-l border-green-200 px-2 flex;
+  }
+}
+
+
+.btn.is-inverted {
+  .btn-body,
+  .btn-icon {
+    @apply bg-white text-black;
+  }
+
+  &:hover .btn-body,
+  &:hover .btn-icon {
+    @apply bg-black text-white;
+  }
+
+  &.to-faded:hover .btn-body {
+    @apply bg-grey-500 text-white;
+  }
+}
+
+.btn.is-lg .btn-body {
+  @apply text-lg;
+}
+
+@responsive {
+  .btn.is-fullwidth {
+    @apply w-full max-w-full;
+
+    .btn-body-wrap {
+      @apply w-full max-w-full;
+    }
+
+    .btn-body {
+      flex: 1;
+    }
+  }
+
+  .btn.is-auto {
+    @apply w-auto;
+  }
+}
