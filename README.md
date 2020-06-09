@@ -1,31 +1,34 @@
-# Patternlab + Tailwind CSS Starter Kit
+# Pirati UI kit
 
-[Patternlab](https://patternlab.io/) is an awesome tool for developing design systems and [Tailwind CSS](https://tailwindcss.com/) is a brilliant utility-first CSS framework built on top of PostCSS. This project combines the two tools into a base Patternlab project that has Tailwind CSS built-in and ready to go.
+This repository holds UI styleguide for Czech Pirate Party websites.
 
+It is built upon:
+
+- [Patternlab](https://patternlab.io/) is an awesome tool for developing design systems
+- [Tailwind CSS](https://tailwindcss.com/) is a brilliant utility-first CSS framework built on top of PostCSS
 
 ## Getting Started
 
 These instructions are for getting the project running off a local development environment:
 
 - Install any system requirements on your dev environment
-- Use Yarn to install project dependencies and build the project 
+- Use NPM to install project dependencies and build the project
 
 
 ### System Requirements
 
 - [Node.js](https://nodejs.org) (v12.14.1 LTS or later recommended)
-- [Yarn](https://yarnpkg.com) (v1.21.1 or later)
 
 ### Install and Run
 
 It's Javascript all the way down so once you have the the system requirements you can run the following commands:
 
 ```
-yarn
-yarn develop
+npm i
+npm run develop
 ```
 
-The `yarn` command will install project dependencies and the `yarn start` command builds the project, sets up a local server for the Patternlab UI and watches relevant template files to rebuild on any changes.
+The `npm` command will install project dependencies and the `npm run develop` command builds the project, sets up a local server for the Patternlab UI and watches relevant template files to rebuild on any changes.
 
 
 ### Build
@@ -33,14 +36,14 @@ The `yarn` command will install project dependencies and the `yarn start` comman
 The build command compiles the styleguide CSS and the Patternlab output but it doesn't create a server for the styleguide website. To build, run:
 
 ```
-yarn run build
+npm run build
 ```
 
 ## Configuring Tailwind
 
 Tailwind CSS comes with default configuration that sets up things like scales for typography, spacing and colours but these defaults and additional configuration can be made by editing the `tailwind.config.js` file in the project root.
 
-> **Note**: if changes to configuration or custom components aren't appearing you may need to rebuild/restart Patternlab. Use `control + c` to stop Gulp and `yarn develop` to rebuild and start the dev server for Patternlab.
+> **Note**: if changes to configuration or custom components aren't appearing you may need to rebuild/restart Patternlab. Use `control + c` to stop Gulp and `npm run develop` to rebuild and start the dev server for Patternlab.
 
 Find out more at the [Tailwind website](https://tailwindcss.com/docs/configuration).
 
