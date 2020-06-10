@@ -1,0 +1,41 @@
+.candidate-card {
+  @apply text-center;
+  padding-top: 3rem;
+}
+
+.candidate-card__avatar {
+  @apply inline-block relative;
+  margin-top: -3rem;
+}
+
+.candidate-card__position {
+  @apply w-5 h-5 absolute bg-black text-white rounded-full text-xl font-normal font-alt text-center;
+  top: 1.75rem;
+  left: -0.5rem;
+  line-height: 2.5rem;
+}
+
+.candidate-card__affiliation {
+  @apply text-sm bg-grey-50 flex border-t border-b border-grey-150;
+
+  > div {
+    @apply py-1 px-2 flex items-center justify-center;
+
+    &:not(:first-child) {
+      @apply border-l border-grey-150;
+    }
+
+    &:last-child {
+      flex: 1;
+    }
+  }
+}
+
+
+.candidate-card--shift-lg {
+  margin-top: 11rem;
+
+  .candidate-card__avatar {
+    margin-top: -11rem;
+  }
+}

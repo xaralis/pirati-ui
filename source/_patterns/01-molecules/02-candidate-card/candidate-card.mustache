@@ -1,0 +1,26 @@
+<div class="candidate-card {{ classes }}">
+  <div class="candidate-card__wrapper">
+    <div class="card candidate-card__body elevation-0 hover:elevation-10 transition duration-200">
+      <div class="candidate-card__avatar">
+        <div class="candidate-card__position">1</div>
+        {{> atoms-basic-avatar(classes: "avatar--xl avatar--bordered") }}
+      </div>
+      <div class="card__body">
+        <h1 class="head-sm-alt">{{ person.first }} {{ person.last }}</h1>
+        <div class="font-light mb-2">{{ person.email }}</div>
+        <h2 class="head-xxs-allcaps">{{ person.occupation }}</h2>
+      </div>
+      <div class="candidate-card__affiliation">
+        <div>{{ person.age }} let</div>
+        <div>
+          {{> atoms-basic-avatar(classes: "w-3 mr-1") }}
+          <span class="font-bold font-condensed">{{ person.party }}</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="font-light text-sm leading-snug italic mb-2">{{ person.claim }}</p>
+        {{> molecules-basic-social-icon-group }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,8 @@
 <div class="badge">
-  <div class="badge-avatar">
-    <img
-      src="http://placehold.it/100x100"
-      alt=""
-    />
-  </div>
+  {{> atoms-basic-avatar(classes: "avatar--md") }}
   <div class="badge-body">
-    <span class="head-sm-heavy">Mikuláš Peksa</span>
-    <p class="badge-occupation">Předseda krajského sdružení Pardubického kraje</p>
+    <span class="head-sm-heavy">{{ person.first }} {{ person.last }}</span>
+    <p class="badge-occupation">{{ person.occupation }}</p>
     {{> atoms-basic-contact-line(icon: "fas fa-phone", caption: "+420 777 123 123", classes: "badge-link") }}
     {{> atoms-basic-contact-line(icon: "fas fa-envelope", classes: "badge-link") }}
   </div>

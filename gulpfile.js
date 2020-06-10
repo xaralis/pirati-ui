@@ -281,17 +281,17 @@ function watch () {
   gulp.watch(
     postcssPaths,
     {useFsEvents: false},
-    gulp.series("tailwind-postcss")
+    gulp.series("tailwind-postcss", "pl-copy:css", reloadCSS)
   );
 
   console.log("Watching following source files:", jsPaths.concat(postcssPaths));
 
   // Detect updated css bundle change
-  gulp.watch(
-    resolvePath(paths().source.root) + "/dist/style.pkgd.css",
-    {useFsEvents: false},
-    gulp.series("pl-copy:css", reloadCSS)
-  );
+  // gulp.watch(
+  //   resolvePath(paths().source.root) + "/dist/style.pkgd.css",
+  //   {useFsEvents: false},
+  //   gulp.series("pl-copy:css", reloadCSS)
+  // );
 
   // Detect changes in styleguide assets down in node_modules
   gulp.watch(

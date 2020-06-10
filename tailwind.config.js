@@ -1,5 +1,10 @@
 module.exports = {
   theme: {
+    extend: {
+      maxWidth: {
+        'xxs': '16rem',
+      }
+    },
     fontFamily: {
       alt: ['Bebas Neue', 'Helvetica', 'Arial', 'sans-serif'],
       body: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
@@ -29,7 +34,9 @@ module.exports = {
       'black': '#000000',
       'white': '#ffffff',
       'grey': {
+        '50': '#f7f7f7',
         '100': '#f3f3f3',
+        '150': '#00000012',
         '200': '#adadad',
         '300': '#4c4c4c',
         '400': '#343434',
@@ -177,6 +184,10 @@ module.exports = {
       kerning: false,          // whether to generate kerning utilities
       textUnset: false,        // whether to generate utilities to unset text properties
       componentPrefix: 'typeset-',  // the prefix to use for text style classes
+    }),
+    require('tailwindcss-elevation')(['responsive', 'hover'], {
+      color: "#dddddd",
+      opacityBoost: '0.23',
     }),
   ]
 }

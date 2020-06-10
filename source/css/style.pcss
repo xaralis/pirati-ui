@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 /**
 * This injects Tailwind's base styles and any base styles registered by
@@ -12,26 +12,29 @@
  */
  @import "tailwindcss/components";
 
-
  /**
- * This injects Tailwind's utility classes and any utility classes registered
-* by plugins.
-*/
-@import "tailwindcss/utilities";
-
-/**
-* Custom components
-*/
+ * Custom components
+ */
+@import "./atoms/avatar.pcss";
 @import "./atoms/button.pcss";
+@import "./atoms/card.pcss";
 @import "./atoms/contact-line.pcss";
 @import "./atoms/heading.pcss";
 @import "./atoms/paragraph.pcss";
 @import "./atoms/social-icon.pcss";
 
 @import "./molecules/badge.pcss";
+@import "./molecules/candidate-card.pcss";
 @import "./molecules/social-icon-group.pcss";
 
+@import "./organisms/candidate-card-list.pcss";
 @import "./organisms/footer.pcss";
+
+/**
+* This injects Tailwind's utility classes and any utility classes registered
+* by plugins.
+*/
+@import "tailwindcss/utilities";
 
 /**
  * Custom utilities
